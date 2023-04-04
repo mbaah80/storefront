@@ -1,0 +1,15 @@
+{
+  "@vite/client": {
+    "isEntry": true,
+    "file": "@vite/client",
+    "css": [],
+    "module": true,
+    "resourceType": "script"
+  },
+  "C:/Users/user-pc/Downloads/themeforest-18l4RoFD-multikart-responsive-vuejs-ecommerce-template/multikart-responsive-vuejs-ecommerce-template/frontend/node_modules/nuxt/dist/app/entry.mjs": {
+    "resourceType": "script",
+    "module": true,
+    "isEntry": true,
+    "file": "C:/Users/user-pc/Downloads/themeforest-18l4RoFD-multikart-responsive-vuejs-ecommerce-template/multikart-responsive-vuejs-ecommerce-template/frontend/node_modules/nuxt/dist/app/entry.mjs"
+  }
+}

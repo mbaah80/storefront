@@ -1,0 +1,155 @@
+{
+  "data": [{
+      "title": "Home",
+      "type": "sub",
+      "badgeValue": "new",
+      "active": false,
+      "children": [
+        {
+          "path": "/shop/fashion",
+          "title": "Clothing",
+          "type": "link"
+        },
+        {
+          "path": "/shop/watch",
+          "title": "Watch",
+          "type": "link"
+        },
+        {
+          "path": "/shop/shoes",
+          "title": "Shoes",
+          "type": "link"
+        },
+        {
+          "path": "/shop/bags",
+          "title": "Bags",
+          "type": "link"
+        },
+        {
+          "path": "/shop/pets",
+          "title": "pets",
+          "type": "link"
+        },
+        {
+          "path": "/shop/furniture",
+          "title": "Furniture",
+          "type": "link"
+        },
+        {
+          "path": "/shop/flower",
+          "title": "Flower",
+          "type": "link"
+        },
+        {
+          "path": "/shop/electronics-1",
+          "title": "Electronics",
+          "type": "link"
+        },
+        {
+          "path": "/shop/vegetables",
+          "title": "Vegetables",
+          "type": "link"
+        },
+        {
+          "path": "/shop/beauty",
+          "title": "Beauty",
+          "type": "link"
+        },
+        {
+          "path": "/shop/tools",
+          "title": "Tools",
+          "type": "link"
+        },
+        {
+          "path": "/shop/jewellery",
+          "title": "Jewellery",
+          "type": "link"
+        },
+        {
+          "path": "/shop/gym",
+          "title": "gym",
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "title": "Marketplace",
+      "type": "link",
+      "path": "/collection/leftsidebar/all",
+      "active": false
+    },
+    {
+      "title": "Shop",
+      "type": "link",
+      "path": "/page/collection",
+      "active": false,
+      "children": [
+        {
+          "path": "/shop/fashion",
+          "title": "Clothing",
+          "type": "link"
+        },
+        {
+          "path": "/shop/watch",
+          "title": "Watch",
+          "type": "link"
+        },
+        {
+          "path": "/shop/shoes",
+          "title": "Shoes",
+          "type": "link"
+        },
+        {
+          "path": "/shop/bags",
+          "title": "Bags",
+          "type": "link"
+        },
+        {
+          "path": "/shop/pets",
+          "title": "pets",
+          "type": "link"
+        },
+        {
+          "path": "/shop/furniture",
+          "title": "Furniture",
+          "type": "link"
+        },
+        {
+          "path": "/shop/flower",
+          "title": "Flower",
+          "type": "link"
+        },
+        {
+          "path": "/shop/electronics-1",
+          "title": "Electronics",
+          "type": "link"
+        },
+        {
+          "path": "/shop/vegetables",
+          "title": "Vegetables",
+          "type": "link"
+        },
+        {
+          "path": "/shop/beauty",
+          "title": "Beauty",
+          "type": "link"
+        },
+        {
+          "path": "/shop/tools",
+          "title": "Tools",
+          "type": "link"
+        },
+        {
+          "path": "/shop/jewellery",
+          "title": "Jewellery",
+          "type": "link"
+        },
+        {
+          "path": "/shop/gym",
+          "title": "gym",
+          "type": "link"
+        }
+      ]
+    }
+  ]
+}
