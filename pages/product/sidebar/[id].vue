@@ -273,7 +273,7 @@
           </div>
         </div>
       </div>
-      <relatedProduct :productTYpe="productTYpe" :productId="productId" />
+<!--      <relatedProduct :productTYpe="productTYpe" :productId="productId" />-->
       <div class="modal fade " id="modal-1" aria-hidden="true" tabindex="-1" role="dialog"
         aria-labelledby="modal-cartLabel">
         <div class="modal-dialog modal-lg modal-dialog-centered">
