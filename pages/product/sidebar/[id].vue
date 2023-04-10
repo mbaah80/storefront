@@ -342,12 +342,12 @@ export default {
 
   methods: {
     getProductById(){
-      console.log(this.$route.params.id, 'this.$route.params.id')
       const db = firebaseApp.db;
       db.collection('products').doc(this.$route.params.id).get().then((doc) => {
         if(doc.exists){
-          console.log(doc.data(), 'doc')
-          this.product = doc.data()
+          let product = doc.data()
+          product.id = doc.id
+          this.product = product
         }else {
           console.log('No such document!')
         }
@@ -376,11 +376,11 @@ export default {
     },
     // add to cart
     addToCart: function (product, qty) {
-      product.quantity = qty || 1
+      product.productQuantity = qty || 1
       useCartStore().addToCart(product)
     },
     buyNow: function (product, qty) {
-      product.quantity = qty || 1
+      product.productQuantity = qty || 1
       useCartStore().addToCart(product)
       this.$router.push('/page/account/checkout')
     },

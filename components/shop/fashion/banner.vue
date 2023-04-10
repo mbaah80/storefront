@@ -23,8 +23,8 @@ export default {
   data() {
     return {
       imagepath: 'https://media.allure.com/photos/6201aca99b3da9fa2a2f29f5/16:9/w_1280,c_limit/castor%20oil.jpg',
-      title: '2019',
-      subtitle: 'fashion trends',
+      title: '2023',
+      subtitle: 'Discount up to 50%',
       text: 'special offer'
     }
   }

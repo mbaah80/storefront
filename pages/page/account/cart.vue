@@ -87,7 +87,7 @@
                   </td>
                   <td>
                     <h2 class="td-color">
-                      {{ curr.symbol }} {{ (item.price * curr.curr) * item.quantity }}</h2>
+                      GHS {{ (item.price) * (item.quantity) }}</h2>
                   </td>
                 </tr>
               </tbody>
@@ -177,9 +177,8 @@ export default {
       })
     }
   },
-
-  mounted() {
-    this.cartItem = JSON.parse(localStorage.getItem('product'))
-  }
+  // mounted() {
+  //   this.cartItem = JSON.parse(localStorage.getItem('product'))
+  // }
 }
 </script>

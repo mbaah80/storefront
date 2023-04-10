@@ -45,7 +45,7 @@ export default {
   },
   data() {
     return {
-      title: 'top collection',
+      title: 'top Products',
       subtitle: 'special offer',
       products: [],
       showCart: false,
@@ -85,7 +85,6 @@ export default {
               let product = doc.data()
               product.id = doc.id;
               this.products.push(product)
-              console.log(this.products, 'products slider')
             });
           })
           .catch((error)=>{

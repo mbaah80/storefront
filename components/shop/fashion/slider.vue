@@ -12,8 +12,8 @@
                   <div class="col">
                     <div class="slider-contain">
                       <div>
-                        <h4>{{ item.title }}</h4>
-                        <h1>{{ item.subtitle }}</h1>
+                        <h4 class="text-bg-danger">{{ item.title }}</h4>
+                        <h1 class="text-bg-warning">{{ item.subtitle }}</h1>
                         <nuxt-link :to="{ path: '/collection/leftsidebar/all' }" class="btn btn-solid">shop
                           now</nuxt-link>
                       </div>
@@ -44,15 +44,15 @@ export default {
 
       items: [
         {
-          imagepath: 'https://pricesghana.com/wp-content/uploads/2019/05/fashion-schools-in-ghana.jpeg',
-          title: 'welcome to fashion',
-          subtitle: 'women fashion',
+          imagepath: 'https://www.afdb.org/sites/default/files/afawa-conversation.jpg',
+          title: 'welcome to Expiro',
+          subtitle: 'Discount up to 50%',
           alignclass: 'p-left'
         },
         {
-          imagepath: 'https://images.squarespace-cdn.com/content/v1/5c55184293a6324e1f793b37/1627313270606-IPMIQ05OSGW59VVEKUGD/Tones+of+trends.jpg?format=1000w',
-          title: 'welcome to fashion',
-          subtitle: 'men fashion',
+          imagepath: 'https://content.pymnts.com/wp-content/uploads/2019/11/Africa-FinTech-investors-OPay-Nigeria-funding-PalmPay-1000x600.jpg',
+          title: 'welcome to Expiro',
+          subtitle: 'Buy Any Product',
           alignclass: 'p-left'
         }
       ]

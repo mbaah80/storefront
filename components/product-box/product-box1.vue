@@ -2,8 +2,7 @@
   <div>
     <div class="img-wrapper">
       <div class="lable-block">
-        <span class="lable3" v-if="product.status">new</span>
-        <span class="lable4" v-if="product.category">on sale</span>
+        <span class="lable3" >new</span>
       </div>
       <div class="front">
         <nuxt-link :to="`/product/sidebar/${product.id}`" >
@@ -13,13 +12,13 @@
             class="img-fluid bg-img media "
             :alt="product.title"
             :key="index"
-            style="height: 400px; width: 100%; object-fit: cover;"
+            style="height: 200px; width: 100%; object-fit: contain;"
           />
         </nuxt-link>
       </div>
       <div class="back" v-if="product.image">
         <nuxt-link :to="`/product/sidebar/${product.id}`" >
-        <img :src='product.image'  :key="index"  :id="product.id" alt="" style="height: 400px; width: 100%; object-fit: cover;" class="img-fluid  m-auto media"> </nuxt-link></div>
+        <img :src='product.image'  :key="index"  :id="product.id" alt="" style="height: 200px; width: 100%; object-fit: contain;" class="img-fluid  m-auto media"> </nuxt-link></div>
       <div class="cart-info cart-wrap">
           <button
             data-toggle="modal"
@@ -54,12 +53,12 @@
         <h6>{{ product.title }}</h6>
       </nuxt-link>
       <p>{{ product.description }}</p>
-      <h4 v-if="product.status">
-        GHS {{ product.price}} <del><small>GHS {{ product.price }}</small></del>
+      <h4 >
+        GHS {{ product.discountPrice}} <del><small>GHS {{ product.price }}</small></del>
       </h4>
-      <h4 v-else>
-        Auction <del><small> 24 Hrs </small></del>
-      </h4>
+      <span class="text-bg-danger  mt-2">
+        Days Left: {{ daysLeft }}
+      </span>
     </div>
   </div>
 
@@ -69,8 +68,12 @@
 import { mapState } from 'pinia'
 import { useProductStore } from '~~/store/products'
 import { useCartStore } from '~~/store/cart'
-import firebase  from '~/plugins/firebase'
+import Timer from '../../components/widgets/timer.vue'
+
 export default {
+  components: {
+    Timer,
+  },
   props: ['product', 'index'],
   data() {
     return {
@@ -89,6 +92,8 @@ export default {
       dismissSecs: 5,
       dismissCountDown: 0,
       products:[],
+      countdownDate: new Date("2023-05-01"),
+      daysLeft: 0
     }
   },
 
@@ -156,6 +161,12 @@ export default {
 
     }
   },
-
+  mounted() {
+    setInterval(() => {
+      const timeDifference = this.countdownDate - new Date();
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
+      this.daysLeft = days;
+    }, 1000);
+  }
 }
 </script>

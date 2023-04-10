@@ -25,7 +25,7 @@
                             type="text"
                             class="form-control"
                             v-model="searchString"
-                           
+
                             placeholder="Search a Product"
                           >
                         </div>
@@ -37,7 +37,7 @@
                         <li v-for="(product,index) in searchItems" :key="index" class="product-box">
                           <div class="img-wrapper">
                             <img
-                              :src='getImgUrl(product.images[0].src)'
+                              :src='getImgUrl(product.image.src)'
                               class="img-fluid bg-img"
                               :key="index"
                             />
@@ -69,10 +69,10 @@
                 <Nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" >
 
           {{ locale.name }}
-          
+
         </Nuxt-link>
               </li>
-             
+
             </ul>
             <h6>currency</h6>
             <ul class="list-inline">
@@ -160,8 +160,8 @@ export default {
   computed: {
     ...mapState(useProductStore,{
       searchItems: 'searchProducts',
-     
-   
+
+
     }),
     ...mapState(useCartStore,{
       // cart:(store)=> store.cartItems,
@@ -170,10 +170,9 @@ export default {
     cart(){
       return useCartStore().cartItems
     },
-    curr(){  
+    curr(){
       return useProductStore().changeCurrency
     }
-   
   },
   watch:{
     searchString(){
@@ -197,7 +196,7 @@ export default {
     },
     removeCartItem: function (product) {
       useCartStore().removeCartItem(product)
-      if(this.cart.length==0 && this.$route.name=== 'page-account-checkout'){
+      if(this.cart.length===0 && this.$route.name=== 'page-account-checkout'){
         this.$router.replace('/page/account/cart')
       }
     },
@@ -206,15 +205,5 @@ export default {
       useProductStore().changeCurrency2(this.currencyChange)
     }
   },
- setup(){
-  const { locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
-const availableLocales = computed(() => {
-  return (locales.value).filter(i => i.code !== locale.value)
-})
-return{
-  switchLocalePath,availableLocales
-}
- }
 }
 </script>

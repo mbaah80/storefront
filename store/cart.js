@@ -1,19 +1,33 @@
-import products from '../data/products.json'
+const products = []
 import { useStorage } from '@vueuse/core'
-
 import {defineStore} from 'pinia'
+import firebaseApp from "~/firebase";
+
+
+const db = firebaseApp.db;
+db.collection('products').get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        let product = doc.data()
+        product.id = doc.id;
+        products.push(product)
+        console.log(products, 'products')
+    });
+})
+
+
 export const useCartStore =defineStore({
     id: 'cart-store',
     state:()=>{
         return{
-            products: products.data,
+            products: products,
             cart:[],
             abc:{}
         }
     },
     actions:{
         addToCart(payload) {
-            const product = this.products.find(item => item.id === payload.id)
+            const product = products.find(item => item.id === payload.id)
+            console.log(product, 'product', payload.id)
             const cartItems = this.cart.find(item => item.id === payload.id)
             const qty = payload.quantity ? payload.quantity : 1
             if (cartItems) {
@@ -52,7 +66,7 @@ export const useCartStore =defineStore({
             })
           },
           removeCartItem(payload) {
-            this.cart = this.cart.filter((item)=>item.id!=payload.id)
+            this.cart = this.cart.filter((item)=>item.id!==payload.id)
 
 
           },
@@ -62,6 +76,7 @@ export const useCartStore =defineStore({
     },
     getters:{
         cartItems: (state) => {
+            console.log(state.cart, 'state.cart')
             return state.cart
           },
           cartTotalAmount: (state) => {
