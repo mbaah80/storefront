@@ -1,7 +1,6 @@
 <template>
     <div>
       <Slider />
-      <CollectionBanner />
       <ProductSlider  @openQuickview="showQuickview" @openCompare="showCoampre" @openCart="showCart" />
       <Banner />
       <ProductTab  :category="category" @openQuickview="showQuickview" @openCompare="showCoampre" @openCart="showCart" />
