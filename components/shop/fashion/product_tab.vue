@@ -126,7 +126,6 @@ export default {
               let product = doc.data()
               product.id = doc.id;
               this.products.push(product)
-              console.log(this.products, 'products tab')
             });
           })
           .catch((error)=>{

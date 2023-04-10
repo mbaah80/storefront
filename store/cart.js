@@ -10,7 +10,6 @@ db.collection('products').get().then((querySnapshot) => {
         let product = doc.data()
         product.id = doc.id;
         products.push(product)
-        console.log(products, 'products')
     });
 })
 
@@ -27,7 +26,6 @@ export const useCartStore =defineStore({
     actions:{
         addToCart(payload) {
             const product = products.find(item => item.id === payload.id)
-            console.log(product, 'product', payload.id)
             const cartItems = this.cart.find(item => item.id === payload.id)
             const qty = payload.quantity ? payload.quantity : 1
             if (cartItems) {
@@ -76,7 +74,6 @@ export const useCartStore =defineStore({
     },
     getters:{
         cartItems: (state) => {
-            console.log(state.cart, 'state.cart')
             return state.cart
           },
           cartTotalAmount: (state) => {

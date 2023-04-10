@@ -20,7 +20,7 @@
                 <tr>
                   <td>
                     <nuxt-link :to="{ path: '/product/sidebar/' + item.id }">
-                      <img :src="getImgUrl(item.images[0].src)" alt />
+                      <img :src="item.image" alt="item" />
                     </nuxt-link>
                   </td>
                   <td>
