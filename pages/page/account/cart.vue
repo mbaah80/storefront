@@ -127,8 +127,6 @@
   </div>
 </template>
 <script>
-import { useStorage } from '@vueuse/core'
-import { mapState } from 'pinia'
 import { useProductStore } from '~~/store/products'
 import { useCartStore } from '~~/store/cart'
 import Breadcrumbs from '../../../components/widgets/breadcrumbs'
@@ -141,11 +139,9 @@ export default {
     }
   },
   components: {
-
     Breadcrumbs
   },
   computed: {
-
     cart() {
         return useCartStore().cartItems
     },
@@ -157,14 +153,13 @@ export default {
     }
   },
   methods: {
-    getImgUrl(path) {
-      return ('/images/' + path)
-    },
+    // getImgUrl(path) {
+    //   return ('/images/' + path)
+    // },
     removeCartItem(product) {
       useCartStore().removeCartItem(product)
     },
     increment(product, qty = 1) {
-
       useCartStore().updateCartQuantity({
         product: product,
         qty: qty
@@ -177,8 +172,8 @@ export default {
       })
     }
   },
-  // mounted() {
-  //   this.cartItem = JSON.parse(localStorage.getItem('product'))
-  // }
+  mounted() {
+    this.cartItem = JSON.parse(localStorage.getItem('product'))
+  }
 }
 </script>

@@ -38,7 +38,7 @@ export const useCartStore =defineStore({
                 quantity: qty
               })
             }
-            product.stock--
+            //product.stock--
           },
           updateCartQuantity( payload)  {
             function calculateStockCounts(product, quantity) {
