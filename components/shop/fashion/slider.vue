@@ -6,15 +6,15 @@
 
           <swiper-slide class="swiper-slide" v-for="(item, index) in items" :key="index">
             <div class="home text-center" :class="item.alignclass"
-              v-bind:style="{ 'background-image': 'url(' + item.imagepath + ')' }">
+              v-bind:style="{ 'background-image': 'url(' + item.url + ')' }">
               <div class="container">
                 <div class="row">
                   <div class="col">
                     <div class="slider-contain">
                       <div>
-                        <h4 class="text-bg-danger">{{ item.title }}</h4>
-                        <h1 class="text-bg-warning">{{ item.subtitle }}</h1>
-                        <nuxt-link :to="{ path: '/collection/leftsidebar/all' }" class="btn btn-solid">shop
+                        <h4 class="text-white">{{ item.title }}</h4>
+                        <h1 class="text-white">{{ item.description}}</h1>
+                        <nuxt-link :to="{ path: '/collection/leftsidebar/all' }" class="btn  shopButton">shop
                           now</nuxt-link>
                       </div>
                     </div>
@@ -38,28 +38,34 @@ import {
 import 'swiper/css';
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+import firebaseApp from "~~/firebase";
 export default {
   data() {
     return {
-
-      items: [
-        {
-          imagepath: 'https://www.afdb.org/sites/default/files/afawa-conversation.jpg',
-          title: 'welcome to Expiro',
-          subtitle: 'Discount up to 50%',
-          alignclass: 'p-left'
-        },
-        {
-          imagepath: 'https://content.pymnts.com/wp-content/uploads/2019/11/Africa-FinTech-investors-OPay-Nigeria-funding-PalmPay-1000x600.jpg',
-          title: 'welcome to Expiro',
-          subtitle: 'Buy Any Product',
-          alignclass: 'p-left'
-        }
-      ]
+      items: []
     }
   },
   components: { Swiper, SwiperSlide },
-
+  methods: {
+    getBanner(){
+      const db = firebaseApp.db;
+      db.collection("banner").get()
+          .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              let item = doc.data()
+              item.id = doc.id;
+              this.items.push(item)
+              console.log(this.items)
+            });
+          })
+          .catch((error)=>{
+            console.log(error)
+          })
+    },
+  },
+  mounted() {
+    this.getBanner()
+  },
   setup() {
 
     return {
@@ -68,3 +74,19 @@ export default {
   }
 }
 </script>
+<style scoped>
+.shopButton{
+  background-color: #8B5A2F !important;
+  color: #ffffff;
+  padding: 15px !important;
+  width: 200px !important;
+}
+.shopButton:hover{
+  background-color: #fff !important;
+  color: #000;
+  padding: 15px !important;
+  width: 200px !important;
+  border: 2px solid #8B5A2F;
+  transition: 1s ease;
+}
+</style>

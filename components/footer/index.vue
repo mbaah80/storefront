@@ -9,7 +9,7 @@
                 <div class="subscribe">
                   <div>
                     <h4>KNOW IT ALL FIRST!</h4>
-                    <p>Never Miss Anything From Expiro By Signing Up To Our Newsletter.</p>
+                    <p>Never Miss Anything From Borle By Signing Up To Our Newsletter.</p>
                   </div>
                 </div>
               </div>
@@ -27,7 +27,7 @@
           </section>
         </div>
       </div>
-      <section class="section-b-space light-layout">
+      <section class="section-b-space light-layout footerMain ">
         <div class="container">
           <div class="row footer-theme partition-f">
             <div class="col-lg-4 col-md-6">
@@ -39,7 +39,8 @@
                   <img src='/images/icon/logo.png' style="height: 150px; object-fit: cover " alt="logo" />
                 </div>
                 <p>
-                  Expiro is Marketplace for Expiring Products and vendor can sell their products before it expires.
+                  At Borle, we're all about preserving traditional craftsmanship and empowering local artisans. Our bags are not just unique and stylish accessories but also a testament to the rich cultural heritage of Africa. Join us in supporting our artisans and their communities. Explore our story and mission on our About Us page today!
+
                 </p>
                 <div class="footer-social">
                   <ul>
@@ -75,7 +76,7 @@
             <div class="col offset-xl-1">
               <div class="sub-title">
                 <div class="footer-title">
-                  <h4>my account</h4>
+                  <h4>Category</h4>
                 </div>
                 <div class="footer-contant">
                   <ul>
@@ -101,7 +102,7 @@
             <div class="col">
               <div class="sub-title">
                 <div class="footer-title">
-                  <h4>why we choose</h4>
+                  <h4>my account</h4>
                 </div>
                 <div class="footer-contant">
                   <ul>
@@ -132,7 +133,7 @@
                 <div class="footer-contant">
                   <ul class="contact-list">
                     <li>
-                      <i class="fa fa-map-marker"></i> Expiro, Accra, Ghana
+                      <i class="fa fa-map-marker"></i> Borle, Accra, Ghana
                     </li>
                     <li>
                       <i class="fa fa-phone"></i>Call Us: 123-456-7898
@@ -157,7 +158,7 @@
             <div class="col-xl-6 col-md-6 col-sm-12">
               <div class="footer-end">
                 <p>
-                  <i class="fa fa-copyright" aria-hidden="true"></i> 2023 Expiro. All Rights Reserved.
+                  <i class="fa fa-copyright" aria-hidden="true"></i> 2023 Borle. All Rights Reserved.
                 </p>
               </div>
             </div>
@@ -203,3 +204,12 @@
 export default {
 }
 </script>
+<style >
+/*.footerMain{*/
+/*  background-color: #2F5057;*/
+/*}*/
+
+.sub-footer{
+  background-color: #D6BCAF  !important;
+}
+</style>

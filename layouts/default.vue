@@ -22,10 +22,9 @@
 export default {
   head() {
     return {
-      title: 'MultiKart Ecommerce | Vuejs Shopping Theme'
     }
   },
- 
+
 
 }
 </script>

@@ -729,7 +729,7 @@ const renderer$1 = /*#__PURE__*/Object.freeze({
   'default': renderer
 });
 
-const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<title>Expiro | Marketplace for Expiring Products</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"Expiro | Marketplace for Expiring Products\">\n<script src=\"https://www.paypal.com/sdk/js?client-id=test&currency=USD\"></script>\n<script src=\"https://checkout.stripe.com/checkout.js\"></script>","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
+const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<title>Borle | Wear Your Store, Celebrate Your Art</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"Borle | Wear Your Store, Celebrate Your Art\">\n<script src=\"https://www.paypal.com/sdk/js?client-id=test&currency=USD\"></script>\n<script src=\"https://checkout.stripe.com/checkout.js\"></script>","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
 
 const _virtual__headStatic$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,

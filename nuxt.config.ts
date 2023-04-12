@@ -9,9 +9,9 @@ export default defineNuxtConfig({
         head:{
             charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Expiro | Marketplace for Expiring Products',
+      title: 'Borle | Wear Your Store, Celebrate Your Art',
       meta: [
-        { name: 'description', content: 'Expiro | Marketplace for Expiring Products' }
+        { name: 'description', content: 'Borle | Wear Your Store, Celebrate Your Art' }
       ],
             script:[
                 {src: 'https://www.paypal.com/sdk/js?client-id=test&currency=USD'},

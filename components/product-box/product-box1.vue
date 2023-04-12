@@ -54,11 +54,8 @@
       </nuxt-link>
       <p>{{ product.description }}</p>
       <h4 >
-        GHS {{ product.discountPrice}} <del><small>GHS {{ product.price }}</small></del>
+        GHS {{ product.price}} <del><small>GHS {{ discountPrice }}</small></del>
       </h4>
-      <span class="text-bg-danger  mt-2">
-        Days Left: {{ daysLeft }}
-      </span>
     </div>
   </div>
 
@@ -93,7 +90,8 @@ export default {
       dismissCountDown: 0,
       products:[],
       countdownDate: new Date("2023-05-01"),
-      daysLeft: 0
+      daysLeft: 0,
+      discountPrice: 90,
     }
   },
 
